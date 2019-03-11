@@ -17,13 +17,13 @@
 
 // Make modular/Practical Inputs and check if this is working 
 
-void distanceVincenty(void);
+double distanceVincenty(double lat1,double lon1,double lat2,double lon2);
 
 double s, lat1, lon1, lat2, lon2, f, U1, U2, L, lambda, lambdaold, itercount, alpha, sigma, C, A, B, u2, cos2sigmam, cossigma, sinsigma, deltasigma; 
 
 //*** Check If Works ***\\\
 
-void distanceVincenty(void){
+double distanceVincenty(double lat1,double lon1,double lat2,double lon2){
 if (fabs(lat1)>90 | fabs(lat2)>90){
     printf("Input latitudes must be between -90 and 90 degrees, inclusive");
 //END CODE - Find way to implement
@@ -92,5 +92,8 @@ deltasigma = B*sin(sigma)*(cos2sigmam+B/4*(cos(sigma)*(-1+2*pow(cos2sigmam,2))
     -B/6*cos2sigmam*(-3+4*pow(sin(sigma),2))*(-3+4*pow(cos2sigmam,2))));
 s = b*A*(sigma-deltasigma);
 
-	printf("Value of s = %f", s);
+	printf("\n\n Value of s = %f", s);
+	
+	return s;
 }
+

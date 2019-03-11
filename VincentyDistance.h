@@ -1,6 +1,6 @@
 #ifndef VincentyDistance_h
 #define VincentyDistance_h
 
-void distanceVincenty(void);
+double distanceVincenty(double lat1,double lon1,double lat2,double lon2);
 
 #endif

@@ -26,6 +26,7 @@
 // U0Rx (VCP receive) connected to PA0
 // U0Tx (VCP transmit) connected to PA1
 
+
 #include "UART.h"
 #include <stdio.h>
 
@@ -39,6 +40,7 @@
 #define UART0_FBRD_R            (*((volatile unsigned long *)0x4000C028))
 #define UART0_LCRH_R            (*((volatile unsigned long *)0x4000C02C))
 #define UART0_CTL_R             (*((volatile unsigned long *)0x4000C030))
+	
 #define UART_FR_TXFF            0x00000020  // UART Transmit FIFO Full
 #define UART_FR_RXFE            0x00000010  // UART Receive FIFO Empty
 #define UART_LCRH_WLEN_8        0x00000060  // 8 bit word length
@@ -59,7 +61,7 @@ void UART_Init(void){
   SYSCTL_RCGC1_R |= SYSCTL_RCGC1_UART0; // activate UART0
   SYSCTL_RCGC2_R |= SYSCTL_RCGC2_GPIOA; // activate port A
   UART0_CTL_R &= ~UART_CTL_UARTEN;      // disable UART
-  UART0_IBRD_R = 43;                    // IBRD = int(80,000,000 / (16 * 115200)) = int(43.402778)
+  UART0_IBRD_R = 43;                    // IBRD = int(80,000,000 / (16 * 9600)) = int(520.83333)
   UART0_FBRD_R = 26;                    // FBRD = round(0.402778 * 64) = 26
                                         // 8 bit word length (no parity bits, one stop bit, FIFOs)
   UART0_LCRH_R = (UART_LCRH_WLEN_8|UART_LCRH_FEN);
@@ -69,7 +71,11 @@ void UART_Init(void){
                                         // configure PA1-0 as UART
   GPIO_PORTA_PCTL_R = (GPIO_PORTA_PCTL_R&0xFFFFFF00)+0x00000011;
   GPIO_PORTA_AMSEL_R &= ~0x03;          // disable analog functionality on PA
+	
 }
+
+
+
 
 //------------UART_InChar------------
 // Wait for new serial port input
@@ -78,15 +84,16 @@ void UART_Init(void){
 unsigned char UART_InChar(void){
   while((UART0_FR_R&UART_FR_RXFE) != 0);
   return((unsigned char)(UART0_DR_R&0xFF));
+	
 }
-//------------UART_OutChar------------
-// Output 8-bit to serial port
-// Input: letter is an 8-bit ASCII character to be transferred
-// Output: none
+
+
+
 void UART_OutChar(unsigned char data){
   while((UART0_FR_R&UART_FR_TXFF) != 0);
   UART0_DR_R = data;
 }
+
 
 
 
@@ -95,9 +102,13 @@ int fputc(int ch, FILE *f){
   if((ch == 10) || (ch == 13) || (ch == 27)){
     UART_OutChar(13);
     UART_OutChar(10);
+		
+		//UART1_OutChar(13);
+   // UART1_OutChar(10);
     return 1;
   }
   UART_OutChar(ch);
+	//UART1_OutChar(ch);
   return 1;
 }
 // input from UART, return data.
@@ -105,6 +116,7 @@ int fgetc(FILE *f){
 	char ch;
 	ch = UART_InChar();
 	UART_OutChar(ch);
+	//UART1_OutChar(ch);
   return ch;
 }
 // Function called when file error occurs.

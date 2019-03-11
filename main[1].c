@@ -80,10 +80,12 @@ int main(void){
 		printf("%c", pointer[i]);
 	}
 	
-	findStream(); 
+	float bearing = Bearing_calc(52.56,72.95,42.521,49.85);
 	
-	float bearing = Bearing_calc(4.71238898,-83.03663,42.51,74.966337);	
-	//42.51 // 74.966337
+	findStream();
+	
+	printf(" \n\n bearing = %f",bearing);
+	
 	printf("\n\nProgram End");
 	
 }
@@ -125,16 +127,16 @@ void storeLatitude(){
 	latminutes[9] = latitudefromstream[11];
 
 	
-//	printf("\n\nlatminutes1 = %c", latminutes[0]);
-//	printf("\nlatminutes2 = %c", latminutes[1]);
-//	printf("\nlatminutes3 = %c", latminutes[2]);
-//	printf("\nlatminutes4 = %c", latminutes[3]);
-//	printf("\nlatminutes5 = %c", latminutes[4]);
-//	printf("\nlatminutes6 = %c", latminutes[5]);
-//	printf("\nlatminutes7 = %c", latminutes[6]);
-//	printf("\nlatminutes8 = %c", latminutes[7]);
-//	printf("\nlatminutes9 = %c", latminutes[8]);
-//	printf("\nlatminutes10 = %c", latminutes[9]);
+	printf("\n\nlatminutes1 = %c", latminutes[0]);
+	printf("\nlatminutes2 = %c", latminutes[1]);
+	printf("\nlatminutes3 = %c", latminutes[2]);
+	printf("\nlatminutes4 = %c", latminutes[3]);
+	printf("\nlatminutes5 = %c", latminutes[4]);
+	printf("\nlatminutes6 = %c", latminutes[5]);
+	printf("\nlatminutes7 = %c", latminutes[6]);
+	printf("\nlatminutes8 = %c", latminutes[7]);
+	printf("\nlatminutes9 = %c", latminutes[8]);
+	printf("\nlatminutes10 = %c", latminutes[9]);
 	
 	printf("\n\nLat minutes = ");
 	for(int i=0; i<11; i++){
@@ -191,16 +193,16 @@ void storeLongitude(){
 	longminutes[8] = longitudefromstream[11];
 	longminutes[9] = longitudefromstream[12];
 	
-//	printf("\n\nlongminutes1 = %c", longminutes[0]);
-//	printf("\nlongminutes2 = %c", longminutes[1]);
-//	printf("\nlongminutes3 = %c", longminutes[2]);
-//	printf("\nlongminutes4 = %c", longminutes[3]);
-//	printf("\nlongminutes5 = %c", longminutes[4]);
-//	printf("\nlongminutes6 = %c", longminutes[5]);
-//	printf("\nlongminutes7 = %c", longminutes[6]);
-//	printf("\nlongminutes8 = %c", longminutes[7]);
-//	printf("\nlongminutes9 = %c", longminutes[8]);
-//	printf("\nlongminutes10 = %c", longminutes[9]);
+	printf("\n\nlongminutes1 = %c", longminutes[0]);
+	printf("\nlongminutes2 = %c", longminutes[1]);
+	printf("\nlongminutes3 = %c", longminutes[2]);
+	printf("\nlongminutes4 = %c", longminutes[3]);
+	printf("\nlongminutes5 = %c", longminutes[4]);
+	printf("\nlongminutes6 = %c", longminutes[5]);
+	printf("\nlongminutes7 = %c", longminutes[6]);
+	printf("\nlongminutes8 = %c", longminutes[7]);
+	printf("\nlongminutes9 = %c", longminutes[8]);
+	printf("\nlongminutes10 = %c", longminutes[9]);
 	
 	printf("\n\nLong minutes = ");
 	for(int i=0; i<10; i++){
@@ -240,11 +242,11 @@ void storeAltitude(){
 	altmeters[3] = altitudefromstream[3];
 	altmeters[4] = altitudefromstream[4];
 	
-//	printf("\n\naltitudemeters = %c", altmeters[0]);
-//	printf("\naltitudemeters = %c", altmeters[1]);
-//	printf("\naltitudemeters = %c", altmeters[2]);
-//	printf("\naltitudemeters = %c", altmeters[3]);
-//	printf("\naltitudemeters = %c", altmeters[4]);
+	printf("\n\naltitudemeters = %c", altmeters[0]);
+	printf("\naltitudemeters = %c", altmeters[1]);
+	printf("\naltitudemeters = %c", altmeters[2]);
+	printf("\naltitudemeters = %c", altmeters[3]);
+	printf("\naltitudemeters = %c", altmeters[4]);
 	
 	printf("\n\nAltitude meters = ");
 	for(int i=0; i<5; i++){
