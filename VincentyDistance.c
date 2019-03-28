@@ -6,7 +6,6 @@
 #include "TExaS.h"
 #include "uart.h"
 #include "PLL.h"
-#include "PortInit.h"
 #include "VincentyDistance.h"
 
 #define a 6378137.0 //earth equatorial radius (wgs84 standard)

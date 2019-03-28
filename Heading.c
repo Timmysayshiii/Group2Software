@@ -12,7 +12,7 @@ float Bearing_calc(double i_lat,double i_lng,double n_lat,double n_lng){
 	ilng_rad = i_lng *(Pi/180);
 	
   nlat_rad = n_lat *(Pi/180);
- 	nlng_rad = n_lng *(Pi/180);
+  nlng_rad = n_lng *(Pi/180);
 	
   Dl = (nlng_rad-ilng_rad);
 	

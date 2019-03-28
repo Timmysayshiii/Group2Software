@@ -413,14 +413,24 @@
               <FilePath>.\UART.h</FilePath>
             </File>
             <File>
-              <FileName>PortInit.c</FileName>
+              <FileName>UniversalFunctions.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\PortInit.c</FilePath>
+              <FilePath>.\UniversalFunctions.c</FilePath>
             </File>
             <File>
-              <FileName>PortInit.h</FileName>
+              <FileName>UniversalFunctions.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\PortInit.h</FilePath>
+              <FilePath>.\UniversalFunctions.h</FilePath>
+            </File>
+            <File>
+              <FileName>calculations.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\calculations.c</FilePath>
+            </File>
+            <File>
+              <FileName>calculations.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\calculations.h</FilePath>
             </File>
             <File>
               <FileName>VincentyDistance.c</FileName>
@@ -428,9 +438,9 @@
               <FilePath>.\VincentyDistance.c</FilePath>
             </File>
             <File>
-              <FileName>VincentyDistance.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\VincentyDistance.h</FilePath>
+              <FileName>vector.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\vector.c</FilePath>
             </File>
             <File>
               <FileName>UART1.c</FileName>
@@ -438,14 +448,34 @@
               <FilePath>.\UART1.c</FilePath>
             </File>
             <File>
+              <FileName>Rotation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Rotation.c</FilePath>
+            </File>
+            <File>
+              <FileName>Heading.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Heading.c</FilePath>
+            </File>
+            <File>
+              <FileName>VincentyDistance.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\VincentyDistance.h</FilePath>
+            </File>
+            <File>
+              <FileName>vector.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\vector.h</FilePath>
+            </File>
+            <File>
               <FileName>UART1.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\UART1.h</FilePath>
             </File>
             <File>
-              <FileName>tm4c123gh6pm.h</FileName>
+              <FileName>Rotation.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\tm4c123gh6pm.h</FilePath>
+              <FilePath>.\Rotation.h</FilePath>
             </File>
             <File>
               <FileName>Heading.h</FileName>
@@ -453,9 +483,14 @@
               <FilePath>.\Heading.h</FilePath>
             </File>
             <File>
-              <FileName>Heading.c</FileName>
+              <FileName>updatedNmeaFunctions.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Heading.c</FilePath>
+              <FilePath>.\updatedNmeaFunctions.c</FilePath>
+            </File>
+            <File>
+              <FileName>updatedNmeaFunctions.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\updatedNmeaFunctions.h</FilePath>
             </File>
           </Files>
         </Group>
